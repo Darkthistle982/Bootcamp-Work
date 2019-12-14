@@ -18,6 +18,20 @@ line-height: 2;
 
 #relative {
     background-color: #eee;
-    position: relative
-    
+    position: relative;
+    text-align: center;
+    padding: 40px;
+    height: 300px;
+}
+
+#absolute {
+    background-color: #999;
+    position: absolute;
+    right: 110px;
+    top: 135%;
+    width: 210px;
+    text-align: center;
+    padding: 20px;
+
+
 }
