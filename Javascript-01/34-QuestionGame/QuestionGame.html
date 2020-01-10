@@ -1,12 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Question Game</title>
 </head>
+
 <body>
-    
+    <header style="text-align: center; font-size: xx-large;">
+        <h1>Wanna Play a Game?</h1>
+    </header>
+    <br>
+    <h3>Answer questions true or false by pressing "T" or "F".</h3>
+
+    <br>
+    <div id="question-text" style="text-align: center; font-size: large;"></div>
+    <br>
+    <div id="true-false" style="text-align: center; font-size: large; font-weight: bold;"></div>
+
+    <p id="score-text" style="font-weight: bold; text-align: right;"></p>
+
+    <script>
+        var score = 0;
+        var scoreText = document.getElementById("score-text");
+        var questions = [
+            { q: "There are seven red stripes in the United Stats flag.", a: "True" },
+            { q: "Freddy Kreuger is the villain in the 'Friday the 13th' movies.", a: "False" },
+            { q: "The favorite food of the Teenage Mutant Ninja Turtle is Pizza.", a: "True" },
+            { q: "A right triangle can never be equilateral.", a: "True" },
+            { q: "The American Civil War ended in 1776.", a: "False" },
+            { q: "The first name of Kramer in the show 'Seinfeld' is Cosmo.", a: "True" },
+            { q: "The Earth spins around its axis once a year.", b: "False" },
+            { q: "The comic strip 'Calvin and Hobbes' features a young boy and his stuffed bear.", a: "False" },
+            { q: "Most of Yellowstone National Park is located in Wyoming.", a: "True" },
+            { q: "A group of dolphins is called a pod.", a: "True" }]
+
+
+        document.onkeyup = function (event) {
+
+
+
+
+            var userStart = event.key.toLowerCase();
+            var t = "True";
+            var f = "False";
+            if (userStart === "t") {
+                userStart = t
+                document.getElementById("question-text").innerHTML =questions[0].q;
+                for (i = 0; i < questions.length; i++) {
+                    if (t === questions[0]);
+                    score++;
+                } if (f === questions[0]);
+                    score--;
+            }
+                 scoreText.textContent = "Score: " + score;
+
+        };
+
+
+
+
+
+
+
+    </script>
 </body>
+
 </html>
