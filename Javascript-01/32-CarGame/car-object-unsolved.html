@@ -1,10 +1,28 @@
 <!DOCTYPE html>
 <html lang="en-us">
-  <head>
-    <meta charset="UTF-8">
-    <title>My First Object</title>
-  </head>
-  <body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>My First Object</title>
+</head>
+
+<body>
+
+  <header>
+    <h1 style="font-family: 'Times New Roman', Times, serif; text-decoration: underline; text-align: center;">Baby you
+      can drive my car!</h1>
+  </header>
+
+  <h3 style="font-family: 'Times New Roman', Times, serif; text-decoration: underline; text-align: center;">Directions
+    </h3>
+    <br>
+    <p style="text-align: center;">Open the console to veiw your stats.</p>
+    <br>
+    <P style="text-align: center;">Press "w" to drive your car to work.</P>
+    <p style="text-align: center;">Press "a" to drive your car around the world.</p>
+    <p style="text-align: center;">Press "t" to get your car a Tune-up.</p>
+    <p style="text-align: center;">Press "h" to honk your horn.</p>
+    
 
     <script>
 
@@ -15,7 +33,7 @@
         mileage: 3000,
         isWorking: true,
 
-        driveToWork: function() {
+        driveToWork: function () {
 
           alert("Old Mileage: " + this.mileage);
 
@@ -24,7 +42,7 @@
           alert("New mileage: " + this.mileage);
         },
 
-        driveAroundWorld: function() {
+        driveAroundWorld: function () {
 
           alert("Old Mileage: " + this.mileage);
 
@@ -36,41 +54,42 @@
           this.isWorking = false;
         },
 
-        getTuneUp: function() {
+        getTuneUp: function () {
           alert("Car is ready to go!");
           this.isWorking = true;
         },
 
-        honk: function() {
+        honk: function () {
           alert("Honk! Honk!");
         },
-
-      
-
       };
-        
-        document.onkeyup = function (event) {
-          var letter = event.key.toLowerCase()
-          if (letter === "h") {
-          car.honk()
-          }}
 
-      // How would we log...
+      document.onkeyup = function (event) {
+        var letter = event.key.toLowerCase();
+        if (letter === "w") {
+          car.driveToWork();
+          reWriteStats();
+        } else if (letter === "h") {
+          car.honk();
+          reWriteStats();
+        } else if (letter === "a") {
+          car.driveAroundWorld();
+          reWriteStats();
+        } else if (letter === "t") {
+          car.getTuneUp();
+          reWriteStats();
+        }
+      };
 
-      // // The car's make?
-      // console.log(car.make);
-      // // The car's model?
-      // console.log(car.model);
-      // // The car's mileage?
-      // console.log(car.mileage);
-      // // How would we run the car's driveToWork method?
-      // car.driveToWork();
-      // // How would we run the car's driveAroundWorld method?
-      // car.driveAroundWorld();
-      // // How would we run the getTuneUp method?
-      // car.getTuneUp();
-      // car.honk();
+      function reWriteStats() {
+        console.log(car.make);
+        console.log(car.model);
+        console.log(car.color);
+        console.log(car.mileage);
+        console.log(car.isWorking);
+      }
     </script>
-    
-  </body>
+
+</body>
+
 </html>
