@@ -5,7 +5,7 @@
 // ==========================================================
 
 // Create a basic variable
-
+var stuff;
 
 
 
@@ -13,12 +13,12 @@
 // ==========================================================
 
 // Create an array of five strings
-
+var movies = ["Batman","Avengers","Halloween","Friday the 13th","Evil Dead"]
 
 
 
 // Create an array of five numbers
-
+var numbers = [1,2,3,4,5]
 
 
 
@@ -26,15 +26,17 @@
 // ==========================================================
 
 // Create a for loop that loops through and prints "My name is Bob five times"
-
+for (i = 0; i < 5; i++) {
+    document.getElementById("names").textContent("My name is Bob")
+}
 
 
 // Create a for loop that loops through your five string array
+for (let i = 0; i < movies.length; i++) {
+    document.getElementById("moves-list").innerHTML(" " + movies);
+}
+    
 
-
-
-
-// 4. FUNCTIONS
 // ==========================================================
 
 // Create a function that takes two numbers and divides the first number by the second.

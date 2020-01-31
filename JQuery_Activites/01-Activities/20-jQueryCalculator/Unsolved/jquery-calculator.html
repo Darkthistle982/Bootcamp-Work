@@ -77,58 +77,14 @@
 
 $(document).ready(function() {
   // Your code here...
+$(".number").on("click", function() {
+  var numberValue = this.value;
+  
+$("#first-number").text(numberValue);
 
-  // var numberEntered = [];
 
-  $("#button-1").on("click", function() {
-  var btn1 = 1;
-  $("#first-number").text(btn1);
-  });
+});
 
-  $("#button-2").on("click", function() {
-  var btn2 = 2;
-  $("#first-number").text(btn2);
-  });
-
-  $("#button-3").on("click", function() {
-  var btn3 = 3;
-  $("#first-number").text(btn3);
-  });
-
-  $("#button-4").on("click", function() {
-  var btn4 = 4;
-  $("#first-number").text(btn4);
-  });
-
-  $("#button-5").on("click", function() {
-  var btn5 = 5;
-  $("#first-number").text(btn5);
-  });
-
-  $("#button-6").on("click", function() {
-  var btn6 = 6;
-  $("#first-number").text(btn6);
-  });
-
-  $("#button-7").on("click", function() {
-  var btn7 = 7;
-  $("#first-number").text(btn7);
-  });
-
-  $("#button-8").on("click", function() {
-  var btn8 = 8;
-  $("#first-number").text(btn8);
-  });
-
-  $("#button-9").on("click", function() {
-  var btn9 = 9;
-  $("#first-number").text(btn9);
-  });
-
-  $("#button-0").on("click", function() {
-  var btn0 = 0;
-  $("#first-number").text(btn0);
-  });
 });
 
 </script>
